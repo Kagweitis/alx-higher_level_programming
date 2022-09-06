@@ -1,11 +1,5 @@
-const args = process.argv.slice(2);
-
+#!/usr/bin/node
 function add (a, b) {
-  if (isNaN(args[0]) || isNaN(args[1])) {
-    console.log('NaN');
-  } else {
-    console.log(parseInt(a) + parseInt(b));
-  }
+	return a + b;
 }
-
-add(args[0], args[1]);
+console.log(add(Number(process.argv[2]), Number(process.argv[3])));
